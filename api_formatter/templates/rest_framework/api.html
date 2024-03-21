@@ -169,7 +169,28 @@
 <span class="font-weight-bold">{{ key }}:</span> <span class="lit">{{ val|break_long_headers|urlize }}</span>{% endfor %}
 </span>{{ content|urlize }}</pre>{% endautoescape %}
     </div>
+
+    {% if display_edit_forms %}
+      {% if raw_data_post_form %}
+        <div class="card pt-20 mb-20">
+          <div class="container" id="post-generic-content-form">
+            {% with form=raw_data_post_form %}
+              <form action="{{ request.get_full_path }}" method="POST" class="form-horizontal">
+                <fieldset>
+                  {% include "rest_framework/raw_data_form.html" %}
+                  <div class="form-actions">
+                    <button class="btn btn--blue btn--sm" title="Make a POST request on the {{ name }} resource">POST</button>
+                  </div>
+                </fieldset>
+              </form>
+            {% endwith %}
+          </div>
+        </div>
+      {% endif %}
+    {% endif %}
   </main>
+
+
 {% endblock content %}
 
 {% block footer %}
