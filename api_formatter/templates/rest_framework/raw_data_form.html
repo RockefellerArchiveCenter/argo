@@ -5,8 +5,8 @@
         {{ field }}
     {% elif field.name == '_content_type' %}
         <div class="select">
-            {{ field.label_tag|add_class:"select__label" }}
-            {{ field|add_class:"select__control" }}
+            {{ field.label_tag }}
+            {{ field|add_class }}
         </div>
     {% endif %}
 {% endfor %}
