@@ -24,7 +24,7 @@
         </p>
     </div>
 
-    <nav class="nav-right" aria-label="Main">
+    <nav class="nav-right">
       <ul class="nav__list show-on-lg-up">
         <li class="nav__item btn--navy">
           <a class="nav__link" href="{% url 'agent-list' %}" id="agents">
@@ -83,7 +83,7 @@
 {% endblock %}
 
 {% block content %}
-  <main class="main" id="main" aria-label="{% trans "main content" %}">
+  <main class="main" id="main">
     <h1>{{ name }}</h1>
     
     {% block breadcrumbs %}
@@ -160,11 +160,11 @@
       </nav>
     {% endif %}
 
-    <div class="request-info card mb-20" aria-label="{% trans "request info" %}">
+    <div class="request-info card mb-20">
       <pre class="prettyprint"><span class="font-weight-bold">{{ request.method }}</span> {{ request.get_full_path }}</pre>
     </div>
 
-    <div class="response-info card mb-20" aria-label="{% trans "response info" %}">
+    <div class="response-info card mb-20">
       <pre class="prettyprint"><span class="meta nocode"><span class="font-weight-bold">HTTP {{ response.status_code }} {{ response.status_text }}</span>{% autoescape off %}{% for key, val in response_headers|items %}
 <span class="font-weight-bold">{{ key }}:</span> <span class="lit">{{ val|break_long_headers|urlize }}</span>{% endfor %}
 </span>{{ content|urlize }}</pre>{% endautoescape %}
