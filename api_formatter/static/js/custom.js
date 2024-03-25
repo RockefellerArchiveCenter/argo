@@ -11,5 +11,4 @@ document.getElementById('nav-toggle').addEventListener('click', function() {
     menu = document.getElementById('nav-toggle-menu')
     menu.classList.toggle('active')
     menu.classList.toggle('closed')
-    menu.setAttribute('aria-expanded', expandedCurrent === 'true' ? 'false' : 'true')
 })
