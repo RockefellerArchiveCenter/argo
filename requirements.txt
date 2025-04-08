@@ -6,13 +6,13 @@
 #
 asgiref==3.8.1
     # via django
-attrs==25.1.0
+attrs==25.3.0
     # via
     #   jsonschema
     #   referencing
 certifi==2025.1.31
     # via elasticsearch
-django==4.2.19
+django==4.2.20
     # via
     #   -r requirements.in
     #   django-cors-headers
@@ -31,7 +31,7 @@ django-elasticsearch-dsl-drf==0.22.5
     # via -r requirements.in
 django-nine==0.2.7
     # via django-elasticsearch-dsl-drf
-djangorestframework==3.15.2
+djangorestframework==3.16.0
     # via
     #   -r requirements.in
     #   django-elasticsearch-dsl-drf
@@ -71,7 +71,7 @@ referencing==0.36.2
     # via
     #   jsonschema
     #   jsonschema-specifications
-rpds-py==0.23.1
+rpds-py==0.24.0
     # via
     #   jsonschema
     #   referencing
@@ -85,7 +85,7 @@ six==1.17.0
     #   python-dateutil
 sqlparse==0.5.3
     # via django
-typing-extensions==4.12.2
+typing-extensions==4.13.0
     # via
     #   asgiref
     #   referencing
