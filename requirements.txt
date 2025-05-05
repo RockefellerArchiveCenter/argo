@@ -10,7 +10,7 @@ attrs==25.3.0
     # via
     #   jsonschema
     #   referencing
-certifi==2025.1.31
+certifi==2025.4.26
     # via elasticsearch
 django==4.2.20
     # via
@@ -51,11 +51,11 @@ jsonschema==4.23.0
     # via
     #   -r requirements.in
     #   rac-schema-validator
-jsonschema-specifications==2024.10.1
+jsonschema-specifications==2025.4.1
     # via jsonschema
-markdown==3.7
+markdown==3.8
     # via -r requirements.in
-packaging==24.2
+packaging==25.0
     # via django-nine
 psycopg2==2.9.10
     # via -r requirements.in
@@ -85,7 +85,7 @@ six==1.17.0
     #   python-dateutil
 sqlparse==0.5.3
     # via django
-typing-extensions==4.13.0
+typing-extensions==4.13.2
     # via
     #   asgiref
     #   referencing
