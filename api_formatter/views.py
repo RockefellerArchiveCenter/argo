@@ -324,9 +324,11 @@ class CollectionViewSet(DocumentViewSet, AncestorMixin):
         self.search.query = (ancestors_query & self.get_structured_query()
                              if self.request.GET.get(settings.REST_FRAMEWORK["SEARCH_PARAM"])
                              else ancestors_query)
-        data["total_hits"] = self.search.count()
 
-        for result in self.filter_queryset(self.search).source(["position", "uri", "title", "online"]).scan():
+        queryset = self.filter_queryset(self.search)
+        data["total_hits"] = queryset.count()
+
+        for result in queryset.source(["position", "uri", "title", "online"]).scan():
             data["hits"].append({
                 "index": result.position,
                 "uri": f"{result.uri.rstrip('/')}",
