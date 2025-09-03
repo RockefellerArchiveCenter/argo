@@ -164,7 +164,7 @@
 
     <div class="response-info card card--container mb-20">
       <pre class="prettyprint"><span class="meta nocode"><span class="text--bold">HTTP {{ response.status_code }} {{ response.status_text }}</span>{% autoescape off %}{% for key, val in response_headers|items %}
-<span class="text--bold">{{ key }}:</span> <span class="lit">{{ val|break_long_headers|urlize }}</span>{% endfor %}
+<span class="text--bold">{{ key }}:</span> <span class="lit">{{ val|urlize }}</span>{% endfor %}
 </span>{{ content|urlize }}</pre>{% endautoescape %}
     </div>
 
