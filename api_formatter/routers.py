@@ -8,8 +8,7 @@ class RACAPIRootView(APIRootView):
     def get(self, request, *args, **kwargs):
         """Adds additional endpoints."""
         self.api_root_dict.update([
-            ('facets', 'facets'),
-            ('mylist', 'mylist')])
+            ('facets', 'facets')])
         return super(RACAPIRootView, self).get(request, *args, **kwargs)
 
 
