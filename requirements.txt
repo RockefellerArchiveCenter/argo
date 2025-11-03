@@ -51,7 +51,7 @@ markdown==3.9
     # via -r requirements.in
 packaging==25.0
     # via django-nine
-psycopg2==2.9.10
+psycopg2==2.9.11
     # via -r requirements.in
 python-dateutil==2.9.0.post0
     # via elasticsearch-dsl
@@ -61,11 +61,11 @@ rac-es==1.1.0
     # via -r requirements.in
 rac-schema-validator==1.0
     # via -r requirements.in
-referencing==0.36.2
+referencing==0.37.0
     # via
     #   jsonschema
     #   jsonschema-specifications
-rpds-py==0.27.1
+rpds-py==0.28.0
     # via
     #   jsonschema
     #   referencing
