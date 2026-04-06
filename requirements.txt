@@ -1,12 +1,12 @@
 asgiref==3.11.1
     # via django
-attrs==25.4.0
+attrs==26.1.0
     # via
     #   jsonschema
     #   referencing
 certifi==2026.2.25
     # via elasticsearch
-django==4.2.28
+django==4.2.29
     # via
     #   -r requirements.in
     #   django-cors-headers
@@ -25,7 +25,7 @@ django-elasticsearch-dsl-drf==0.22.5
     # via -r requirements.in
 django-nine==0.2.7
     # via django-elasticsearch-dsl-drf
-djangorestframework==3.16.1
+djangorestframework==3.17.1
     # via
     #   -r requirements.in
     #   django-elasticsearch-dsl-drf
