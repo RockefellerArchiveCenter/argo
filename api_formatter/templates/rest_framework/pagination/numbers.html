@@ -1,14 +1,14 @@
 <ul class="pagination__list">
   {% if previous_url %}
     <li class="pagination__button">
-      <a href="{{ previous_url }}" class="material-icon" aria-disabled="false" aria-label="Previous page" rel="prev">
-        keyboard_arrow_left
+      <a href="{{ previous_url }}" aria-disabled="false" aria-label="Previous page" rel="prev">
+        <span class="material-icon" aria-hidden="true">keyboard_arrow_left</span>
       </a>
     </li>
   {% else %}
     <li class="pagination__button disabled">
-      <a class="material-icon" aria-disabled="true" aria-label="Previous page" rel="prev" >
-        keyboard_arrow_left
+      <a aria-disabled="true" aria-label="Previous page" rel="prev" >
+        <span class="material-icon" aria-hidden="true">keyboard_arrow_left</span>
       </a>
     </li>
   {% endif %}
@@ -16,12 +16,14 @@
   {% for page_link in page_links %}
     {% if page_link.is_break %}
       <li class="pagination__break disabled">
-        <a aria-disabled="true" aria-label="truncated pages">...</a>
+        <a aria-disabled="true" aria-label="truncated pages">
+          <span class="material-icon" aria-hidden="true">...</span>
+        </a>
       </li>
     {% else %}
       {% if page_link.is_active %}
         <li class="pagination__page page__active">
-          <a rel="canonical" aria-label="Page {{page_link.number}} is your current page" aria-current="page" href="{{ page_link.url }}">{{ page_link.number }}</a>
+          <a rel="canonical" aria-current="page" href="{{ page_link.url }}">{{ page_link.number }}</a>
         </li>
       {% else %}
         <li  class="pagination__page">
@@ -33,14 +35,14 @@
 
   {% if next_url %}
     <li class="pagination__button">
-      <a href="{{ next_url }}" class="material-icon" aria-label="Next page" aria-disabled="false" rel="next">
-        keyboard_arrow_right
+      <a href="{{ next_url }}" aria-label="Next page" aria-disabled="false" rel="next">
+        <span class="material-icon" aria-hidden="true">keyboard_arrow_right</span>
       </a>
     </li>
   {% else %}
     <li class="pagination__button disabled">
-      <a class="material-icon" aria-disabled="true" aria-label="Next page" rel="next" >
-        keyboard_arrow_right
+      <a aria-disabled="true" aria-label="Next page" rel="next">
+        <span class="material-icon" aria-hidden="true">keyboard_arrow_right</span>
       </a>
     </li>
   {% endif %}
