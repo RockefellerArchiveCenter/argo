@@ -1,4 +1,4 @@
-<ul class="pagination__list">
+<ol class="pagination__list">
   {% if previous_url %}
     <li class="pagination__button">
       <a href="{{ previous_url }}" aria-disabled="false" aria-label="Previous page" rel="prev">
@@ -15,15 +15,11 @@
 
   {% for page_link in page_links %}
     {% if page_link.is_break %}
-      <li class="pagination__break disabled">
-        <a aria-disabled="true" aria-label="truncated pages">
-          <span class="material-icon" aria-hidden="true">...</span>
-        </a>
-      </li>
+      <li class="pagination__break disabled" aria-label="truncated pages">...</li>
     {% else %}
       {% if page_link.is_active %}
         <li class="pagination__page page__active">
-          <a rel="canonical" aria-current="page" href="{{ page_link.url }}">{{ page_link.number }}</a>
+          <a aria-current="page" href="{{ page_link.url }}">{{ page_link.number }}</a>
         </li>
       {% else %}
         <li  class="pagination__page">
@@ -46,4 +42,4 @@
       </a>
     </li>
   {% endif %}
-</ul>
+</ol>
