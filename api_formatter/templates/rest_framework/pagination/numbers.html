@@ -15,7 +15,10 @@
 
   {% for page_link in page_links %}
     {% if page_link.is_break %}
-      <li class="pagination__break disabled" aria-label="truncated pages">...</li>
+      <li class="pagination__break">
+        <span aria-hidden="true">...</span>
+        <span class="visually-hidden">More pages available</span>
+      </li>
     {% else %}
       {% if page_link.is_active %}
         <li class="pagination__page page__active">
