@@ -1,8 +1,8 @@
-# argo
+# Argo
 
 API middleware which provides a simplified API of data stored in Elasticsearch.
 
-argo is part of [Project Electron](https://github.com/RockefellerArchiveCenter/project_electron), an initiative to build sustainable, open and user-centered infrastructure for the archival management of digital records at the [Rockefeller Archive Center](http://rockarch.org/).
+Argo is part of [Project Electron](https://github.com/RockefellerArchiveCenter/project_electron), an initiative to build sustainable, open and user-centered infrastructure for the archival management of digital records at the [Rockefeller Archive Center](http://rockarch.org/).
 
 ## Setup
 
@@ -13,17 +13,17 @@ Install [git](https://git-scm.com/) and clone the repository
 Install [Docker](https://store.docker.com/search?type=edition&offering=community) and run docker-compose from the root directory
 
     $ cd argo
-    $ docker-compose up
+    $ docker compose up
 
-Once the application starts successfully, you should be able to access the application in your browser at `http://localhost:8000`
+Once the application starts successfully, you should be able to access the application in your browser at `http://localhost:8014`
 
 When you're done, shut down docker-compose
 
-    $ docker-compose down
+    $ docker compose down
 
 Or, if you want to remove all data
 
-    $ docker-compose down -v
+    $ docker compose down -v
 
 
 ## Configuring
