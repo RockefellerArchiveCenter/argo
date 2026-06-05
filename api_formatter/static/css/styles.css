@@ -37,6 +37,4 @@ pre {
 .card {
   min-height: 0;
   padding: 10px;
-  max-width: 100%;
-  overflow-wrap: break-word;
 }
