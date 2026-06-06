@@ -14,7 +14,8 @@ from rest_framework.test import APIRequestFactory
 
 from argo import settings
 
-from .view_helpers import citation_title, date_string, flatten_ancestors
+from .view_helpers import (citation_title, date_string, flatten_ancestors,
+                           join_hierarchy)
 from .views import (AgentViewSet, CollectionViewSet, MyListView, ObjectViewSet,
                     SearchView, TermViewSet)
 
@@ -300,6 +301,46 @@ class TestAPI(TestCase):
         input = {"title": "top level", "child": {"title": "second level", "child": {"title": "third level"}}}
         output = flatten_ancestors(input)
         self.assertEqual(output, ["top level", "second level", "third level"])
+
+    def test_join_hierarchy(self):
+        cases = [
+            (
+                "partial overlap",
+                ["Europe", "Europe, France", "Europe, France, Paris"],
+                ", ",
+                "Europe, France, Paris",
+            ),
+            (
+                "no overlap",
+                ["Apple", "Banana", "Cherry"],
+                " > ",
+                "Apple > Banana > Cherry",
+            ),
+            (
+                "leading punctuation removed",
+                ["A", "A, B", "A, B, C"],
+                ", ",
+                "A, B, C",
+            ),
+            (
+                "hyphen separator overlap",
+                ["A", "A-B", "A-B-C"],
+                "-",
+                "A-B-C",
+            ),
+            (
+                "duplicate item",
+                ["A", "A"],
+                " > ",
+                "A",
+            ),
+        ]
+
+        for name, parts, separator, expected in cases:
+            with self.subTest(name=name):
+                self.assertEqual(
+                    join_hierarchy(parts, separator),
+                    expected)
 
     def test_citation_title(self):
         for input, expected in [
