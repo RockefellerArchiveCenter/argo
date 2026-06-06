@@ -26,7 +26,7 @@ from .view_helpers import (FILTER_BACKENDS, FILTER_FIELDS,
                            SEARCH_NESTED_FIELDS, STRING_LOOKUPS,
                            ChildrenPaginator, SearchMixin, citation_title,
                            date_string, description_from_notes,
-                           flatten_ancestors)
+                           flatten_ancestors, join_hierarchy)
 
 
 class AncestorMixin(object):
@@ -211,9 +211,9 @@ class DocumentViewSet(SearchMixin, ObjectResolverMixin, ReadOnlyModelViewSet):
         url = f"{settings.CITATION_REPOSITORY_BASEURL.rstrip('/')}/{object_path}"
         ancestors = []
         if getattr(self, 'ancestors', False):
-            ancestors = settings.CITATION_SEPARATOR.join(
-                flatten_ancestors(self.ancestors(request, pk).data)
-            )
+            ancestors = join_hierarchy(
+                flatten_ancestors(self.ancestors(request, pk).data),
+                settings.CITATION_SEPARATOR)
 
         citation = [
             citation_title(title, dates),
