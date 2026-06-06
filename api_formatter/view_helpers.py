@@ -1,3 +1,5 @@
+import re
+
 from django.http import Http404
 from django_elasticsearch_dsl_drf.constants import (LOOKUP_FILTER_PREFIX,
                                                     LOOKUP_FILTER_RANGE,
@@ -198,6 +200,40 @@ def flatten_ancestors(ancestors):
         elif key == 'title':
             ancestors_list.append(value)
     return ancestors_list
+
+
+def join_hierarchy(parts, separator):
+    """Join hierarchical parts, removing duplicated prefixes."""
+    result = []
+    previous = ""
+
+    for item in parts:
+        item = item.strip()
+
+        if not previous:
+            result.append(item)
+            previous = item
+            continue
+
+        # Find the longest common prefix ending at a separator
+        common = ""
+        for i in range(min(len(previous), len(item)) + 1):
+            if previous[:i] == item[:i]:
+                common = item[:i]
+            else:
+                break
+
+        remainder = item[len(common):]
+
+        # Remove leading punctuation and whitespace
+        remainder = re.sub(r'^[\s,;:\-]+', '', remainder)
+
+        if remainder:
+            result.append(remainder)
+
+        previous = item
+
+    return separator.join(result)
 
 
 def citation_title(title, date_string):
