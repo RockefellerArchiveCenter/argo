@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.3](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.2...argo-v4.2.3) (2026-06-06)
+
+
+### Bug Fixes
+
+* remove duplication from citations ([d9c7732](https://github.com/RockefellerArchiveCenter/argo/commit/d9c7732ff1732c6139746cdf442d6e47549de330))
+
 ## [4.2.2](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.1...argo-v4.2.2) (2026-06-05)
 
 
