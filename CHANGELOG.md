@@ -1,5 +1,21 @@
 # Changelog
 
+## [4.2.4](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.3...argo-v4.2.4) (2026-06-17)
+
+
+### Bug Fixes
+
+* fix release typo ([e0209a0](https://github.com/RockefellerArchiveCenter/argo/commit/e0209a0aef59e9c2dbf01ab51c0a2b8651efc074))
+* fix release typo ([30019d8](https://github.com/RockefellerArchiveCenter/argo/commit/30019d807125611ad446429871f4bbc079380d4b))
+* fix typo in release workflow ([98a4cc4](https://github.com/RockefellerArchiveCenter/argo/commit/98a4cc487986dc43de120c43e18c675c06cabe1d))
+* fix typo in release workflow ([e0209a0](https://github.com/RockefellerArchiveCenter/argo/commit/e0209a0aef59e9c2dbf01ab51c0a2b8651efc074))
+* update deploy and enforcer workflows ([dca797d](https://github.com/RockefellerArchiveCenter/argo/commit/dca797ddbfa98b2a760371b9f6f3503d97f887a1))
+* update deploy logic ([8b871a0](https://github.com/RockefellerArchiveCenter/argo/commit/8b871a0caa63e3deb08b67798e3026063053a289))
+* update deploys ([dca797d](https://github.com/RockefellerArchiveCenter/argo/commit/dca797ddbfa98b2a760371b9f6f3503d97f887a1))
+* update deploys ([8b871a0](https://github.com/RockefellerArchiveCenter/argo/commit/8b871a0caa63e3deb08b67798e3026063053a289))
+* update enforcer ([bc936dc](https://github.com/RockefellerArchiveCenter/argo/commit/bc936dc097049ce3b3d33a2039297663705cb31e))
+* updates workflows for deploy and enforcer ([5bbf3ed](https://github.com/RockefellerArchiveCenter/argo/commit/5bbf3ed543216d93c93f00d1bdb6df19667ce5bb))
+
 ## [4.2.3](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.2...argo-v4.2.3) (2026-06-06)
 
 
