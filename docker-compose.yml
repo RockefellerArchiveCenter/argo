@@ -1,15 +1,23 @@
 services:
-  argo-db:
+  db:
     image: postgres:14.4
     environment:
       - POSTGRES_USER=postgres  # name of the application database user
       - POSTGRES_PASSWORD=postgres  # name of the application database user
       - POSTGRES_DB=postgres  # name of the application database
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     volumes:
       - argodbvolume:/var/lib/postgresql/data/
-  argo-web:
-    build: .
-    entrypoint: /code/entrypoint.sh
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: base
+    command: /var/www/argo/entrypoint.dev.sh
     environment:
       - APPLICATION_PORT=${APPLICATION_PORT:-8014}
     volumes:
@@ -17,7 +25,8 @@ services:
     ports:
       - "${APPLICATION_PORT:-8014}:${APPLICATION_PORT:-8014}"
     depends_on:
-      - argo-db
+      db:
+        condition: service_healthy
 
   elasticsearch:
     image: elasticsearch:7.17.25
