@@ -4,7 +4,7 @@ attrs==26.1.0
     # via
     #   jsonschema
     #   referencing
-certifi==2026.5.20
+certifi==2026.6.17
     # via elasticsearch
 django==4.2.30
     # via
@@ -57,9 +57,9 @@ python-dateutil==2.9.0.post0
     # via elasticsearch-dsl
 pyyaml==6.0.3
     # via -r requirements.in
-rac-es==1.1.1
+rac-es==1.1.2
     # via -r requirements.in
-rac-schema-validator==1.1.1
+rac-schema-validator==1.1.2
     # via -r requirements.in
 referencing==0.37.0
     # via
