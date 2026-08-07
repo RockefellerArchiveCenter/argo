@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.2.6](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.5...argo-v4.2.6) (2026-08-07)
+
+
+### Bug Fixes
+
+* **deps:** Scheduled dependency updates ([b27c25c](https://github.com/RockefellerArchiveCenter/argo/commit/b27c25cf29329e6fee0f3b76da165f37f4e9d7dc))
+* **deps:** Scheduled dependency updates ([b27c25c](https://github.com/RockefellerArchiveCenter/argo/commit/b27c25cf29329e6fee0f3b76da165f37f4e9d7dc))
+* **deps:** Scheduled dependency updates ([9f6b8de](https://github.com/RockefellerArchiveCenter/argo/commit/9f6b8dec7ebb5e9b5e06d01c37201af6109d5246))
+* **deps:** Scheduled dependency updates ([9f6b8de](https://github.com/RockefellerArchiveCenter/argo/commit/9f6b8dec7ebb5e9b5e06d01c37201af6109d5246))
+* **deps:** Scheduled dependency updates ([3d701e4](https://github.com/RockefellerArchiveCenter/argo/commit/3d701e41d865ea6ffaa5b47b74fa413f0120af50))
+
 ## [4.2.5](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.4...argo-v4.2.5) (2026-07-06)
 
 
