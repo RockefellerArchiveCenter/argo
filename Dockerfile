@@ -15,6 +15,8 @@ RUN pip install -r requirements.txt
 # Add application code
 COPY ${APPLICATION_DIR} ${APPLICATION_DIR}
 COPY api_formatter api_formatter
+COPY fixtures fixtures
+COPY rac_schemas rac_schemas
 COPY entrypoint.* manage.py ./
 
 FROM base AS build
