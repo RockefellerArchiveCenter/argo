@@ -15,6 +15,7 @@ jobs:
       name: ${{ github.event_name == 'release' && 'base' || github.ref_name }}
 
     env:
+      APPLICATION_NAME: argo
       CONTAINER: web
       APPLICATION_PORT: 8014
 
@@ -74,7 +75,7 @@ jobs:
       - name: Deploy to AWS CodeDeploy
         run: aws deploy create-deployment
           --region ${{ secrets.AWS_REGION }}
-          --application-name $APPLICATION_NAME
+          --application-name $DEPLOY_APPLICATION_NAME
           --deployment-config-name CodeDeployDefault.OneAtATime
           --deployment-group-name $DEPLOYMENT_GROUP
           --s3-location bucket=$AWS_BUCKET_NAME,bundleType=zip,key=$DEPLOY_ZIP_NAME
