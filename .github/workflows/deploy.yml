@@ -14,6 +14,10 @@ jobs:
     environment:
       name: ${{ github.event_name == 'release' && 'base' || github.ref_name }}
 
+    env:
+      CONTAINER: web
+      APPLICATION_PORT: 8014
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v7.0.1
