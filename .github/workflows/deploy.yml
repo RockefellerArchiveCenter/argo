@@ -1,9 +1,9 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - development
+  # push:
+  #   branches:
+  #     - development
   release:
     types: [published]
   workflow_dispatch:
@@ -15,8 +15,7 @@ jobs:
       name: ${{ github.event_name == 'release' && 'base' || github.ref_name }}
 
     env:
-      APPLICATION_NAME: argo
-      CONTAINER: argo-web
+      CONTAINER: web
       APPLICATION_PORT: 8014
 
     steps:
