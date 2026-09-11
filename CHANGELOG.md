@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.2.8](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.7...argo-v4.2.8) (2026-09-11)
+
+
+### Bug Fixes
+
+* restore application_name env var ([403dff2](https://github.com/RockefellerArchiveCenter/argo/commit/403dff269c14c5411a7c5654e6ecfb9be4f2a358))
+* restore application_name environment variable ([25de1f9](https://github.com/RockefellerArchiveCenter/argo/commit/25de1f929059b6b09034f8a878ed137e718fe031))
+
 ## [4.2.7](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.6...argo-v4.2.7) (2026-09-08)
 
 
