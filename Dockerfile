@@ -1,4 +1,4 @@
-FROM python:3.10-alpine AS base
+FROM python:3.12-alpine AS base
 ENV APPLICATION_NAME=argo
 ENV APPLICATION_DIR=argo
 ENV APPLICATION_PORT=8014
@@ -9,6 +9,7 @@ RUN apk add --no-cache postgresql-dev gcc py3-setuptools py3-distutils-extra
 WORKDIR /var/www/${APPLICATION_NAME}
 
 # Install Python requirements
+RUN pip install setuptools
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
