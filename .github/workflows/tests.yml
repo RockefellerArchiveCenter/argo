@@ -14,7 +14,7 @@ jobs:
 
     env:
       APPLICATION_NAME: argo
-      CONTAINER: argo-web
+      CONTAINER: web
       APPLICATION_PORT: 8014
 
     services:
@@ -31,7 +31,7 @@ jobs:
       - name: Set up Python and cache pip
         uses: actions/setup-python@v7.0.0
         with:
-          python-version: '3.10'
+          python-version: '3.12'
           cache: 'pip'
 
       - name: Copy config file
@@ -42,9 +42,6 @@ jobs:
 
       - name: Start Docker containers
         run: docker compose up -d
-
-      - name: Wait for services to be ready
-        run: ./wait-for-it.sh $CONTAINER:$APPLICATION_PORT -- echo "$CONTAINER is ready"
       
       - name: Run tests
         run: docker compose exec -T $CONTAINER python manage.py test
