@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.2.8](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.7...argo-v4.2.8) (2026-09-15)
+
+
+### Bug Fixes
+
+* add setuptools install to deploy ([155d489](https://github.com/RockefellerArchiveCenter/argo/commit/155d489c750a6964dcf81dbb28fc48a54698bc15))
+* Install setuptools manually ([56c54b7](https://github.com/RockefellerArchiveCenter/argo/commit/56c54b7acdb4dead08f175af5ada940ff0949adb))
+* restore application_name env var ([403dff2](https://github.com/RockefellerArchiveCenter/argo/commit/403dff269c14c5411a7c5654e6ecfb9be4f2a358))
+* restore application_name environment variable ([25de1f9](https://github.com/RockefellerArchiveCenter/argo/commit/25de1f929059b6b09034f8a878ed137e718fe031))
+
 ## [4.2.7](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.6...argo-v4.2.7) (2026-09-08)
 
 
