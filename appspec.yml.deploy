@@ -9,6 +9,8 @@ hooks:
       timeout: 30
     - location: deploy_scripts/install_dependencies_django.sh
       timeout: 300
+    - location: deploy_scripts/install_setuptools_pip.sh
+      timeout: 300
     - location: deploy_scripts/run_management_commands_django.sh
       timeout: 300
   ApplicationStart:
