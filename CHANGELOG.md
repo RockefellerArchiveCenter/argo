@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.10](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.9...argo-v4.2.10) (2026-09-16)
+
+
+### Bug Fixes
+
+* fix typo in deploy ([815bf2e](https://github.com/RockefellerArchiveCenter/argo/commit/815bf2e0830cf6d70d4be33410eddbffb87e62b6))
+
 ## [4.2.9](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.8...argo-v4.2.9) (2026-09-16)
 
 
