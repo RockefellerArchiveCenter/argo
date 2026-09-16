@@ -43,6 +43,7 @@ jobs:
             deploy_scripts/install_dependencies_django.sh.deploy
             deploy_scripts/run_management_commands_django.sh.deploy
             deploy_scripts/set_permissions.sh.deploy
+            deploy_scripts/install_setuptools_pip.sh.deploy
 
       - name: Rename deploy files
         run: |
@@ -52,6 +53,7 @@ jobs:
           mv deploy_scripts/install_dependencies_django.sh.deploy deploy_scripts/install_dependencies_django.sh
           mv deploy_scripts/run_management_commands_django.sh.deploy deploy_scripts/run_management_commands_django.sh
           mv deploy_scripts/set_permissions.sh.deploy deploy_scripts/set_permissions.sh
+          mv deploy_scriptsinstall_setuptools_pip.sh.deploy deploy_scriptsinstall_setuptools_pip.sh
 
       - name: Make deploy scripts executable
         run: chmod +x deploy_scripts/*.sh
