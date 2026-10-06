@@ -26,8 +26,8 @@ class ExtentSerializer(serializers.Serializer):
 
 class FileObjectSerializer(serializers.Serializer):
     title = serializers.CharField()
-    download = serializers.CharField()
-    manifest = serializers.CharField()
+    download = serializers.CharField(allow_null=True)
+    manifest = serializers.CharField(allow_null=True)
 
 
 class LanguageSerializer(serializers.Serializer):
