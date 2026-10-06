@@ -22,7 +22,7 @@ services:
     environment:
       - APPLICATION_PORT=${APPLICATION_PORT:-8014}
     volumes:
-      - .:/code
+      - .:/var/www/argo
     ports:
       - "${APPLICATION_PORT:-8014}:${APPLICATION_PORT:-8014}"
     depends_on:
