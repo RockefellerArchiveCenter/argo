@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.2.12](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.11...argo-v4.2.12) (2026-10-06)
+
+
+### Bug Fixes
+
+* support files arrays without both manifest and download ([c6e5a80](https://github.com/RockefellerArchiveCenter/argo/commit/c6e5a80994bb62a50cd607002a8b618d19b0716f))
+* support more flexible files arrays ([b312ccb](https://github.com/RockefellerArchiveCenter/argo/commit/b312ccba0326182c5a0bbbe6a1dd4655c20815d4))
+
 ## [4.2.11](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.10...argo-v4.2.11) (2026-10-06)
 
 
