@@ -298,7 +298,7 @@ class CollectionViewSet(DocumentViewSet, AncestorMixin):
         base_query = self.search.query()
         self.search.query = Q("match_phrase", parent=pk)
         child_hits = self.search.source(
-            ["group", "type", "uri", "dates", "notes", "online", "position", "title"]
+            ["group", "type", "uri", "dates", "notes", "online", "files", "position", "title"]
         ).sort("position")
         obj = self.resolve_object(Collection, pk, source_fields=["group"])
         paginator = ChildrenPaginator()

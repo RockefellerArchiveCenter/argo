@@ -86,6 +86,7 @@ class ReferenceSerializer(serializers.Serializer):
     uri = serializers.SerializerMethodField()
     dates = serializers.CharField(allow_null=True)
     description = serializers.CharField(allow_null=True)
+    files = files = FileObjectSerializer(many=True, default=[])
     group = GroupSerializer(allow_null=True)
     index = serializers.IntegerField(source="position", allow_null=True)
 
