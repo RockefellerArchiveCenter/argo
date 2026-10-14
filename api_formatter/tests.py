@@ -220,6 +220,8 @@ class TestAPI(TestCase):
                     viewset, pk))
             for online in self.find_in_dict(response.data, "online"):
                 self.assertTrue(isinstance(online, bool))
+            for files in self.find_in_dict(response.data, "files"):
+                self.assertTrue(isinstance(files, list))
             self.assertEqual(EXPECTED_CHILDREN[pk], response.data["count"])
 
     def minimap_view(self, pk):
