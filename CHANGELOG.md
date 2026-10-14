@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.3.0](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.12...argo-v4.3.0) (2026-10-14)
+
+
+### Features
+
+* add files list to ReferenceSerializer ([bd46bc3](https://github.com/RockefellerArchiveCenter/argo/commit/bd46bc374f4fb16adaec94e88778ef138353e4f6))
+* adds files list to ReferenceSerializer ([96dbc39](https://github.com/RockefellerArchiveCenter/argo/commit/96dbc399de8836aaf22d67b0cab3b1a9487474cd))
+
 ## [4.2.12](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.11...argo-v4.2.12) (2026-10-06)
 
 
