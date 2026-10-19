@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.3.1](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.3.0...argo-v4.3.1) (2026-10-19)
+
+
+### Bug Fixes
+
+* update reading room hours in footer ([a811941](https://github.com/RockefellerArchiveCenter/argo/commit/a811941804392828bf8804b9c8a472a1aefc8a58))
+* update reading room hours in footer ([2deebec](https://github.com/RockefellerArchiveCenter/argo/commit/2deebec67a6b0aab8cd6853c72806935fd24e8f4))
+
 ## [4.3.0](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.2.12...argo-v4.3.0) (2026-10-14)
 
 
