@@ -21,6 +21,27 @@ services:
     command: /var/www/argo/entrypoint.dev.sh
     environment:
       - APPLICATION_PORT=${APPLICATION_PORT:-8014}
+      - DJANGO_DEBUG=1
+      - DJANGO_SECRET_KEY=sx6mf&q*eifhk^(cx197+=*cuq0guy$43!+hy#g1l4orkklx\$g
+      - DJANGO_STATIC_URL=/static/
+      - DJANGO_ALLOWED_HOSTS=localhost,argo-web
+      - ELASTICSEARCH_HOSTS=elasticsearch:9200
+      - ELASTICSEARCH_INDEX=default
+      - ELASTICSEARCH_CONNECTION=default
+      - ELASTICSEARCH_API_KEY=
+      - SQL_ENGINE=django.db.backends.postgresql
+      - SQL_DATABASE=postgres
+      - SQL_USER=postgres
+      - SQL_PASSWORD=postgres
+      - SQL_HOST=db
+      - SQL_PORT=5432
+      - USE_X_FORWARDED_HOST=0 
+      - SECURE_PROXY_SSL_HEADER=HTTP_X_FORWARDED_PROTO,https
+      - CITATION_REPOSITORY_NAME=Rockefeller Archive Center
+      - CITATION_REPOSITORY_BASEURL=https://dimes.rockarch.org/
+      - CITATION_SEPARATOR=; 
+      - CONFIG_SEPARATOR=,
+
     volumes:
       - .:/var/www/argo
     ports:
