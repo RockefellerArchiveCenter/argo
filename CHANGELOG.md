@@ -1,5 +1,16 @@
 # Changelog
 
+## [4.3.2](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.3.1...argo-v4.3.2) (2026-10-21)
+
+
+### Bug Fixes
+
+* pip and deps ([8c87318](https://github.com/RockefellerArchiveCenter/argo/commit/8c873181c02d4f46e8f150baeab51e535b5dd1fd))
+* pip and deps ([8c87318](https://github.com/RockefellerArchiveCenter/argo/commit/8c873181c02d4f46e8f150baeab51e535b5dd1fd))
+* pip and deps ([52ddfc7](https://github.com/RockefellerArchiveCenter/argo/commit/52ddfc72e77991d4386b859cfe73ea7d57698daf))
+* pip and deps ([52ddfc7](https://github.com/RockefellerArchiveCenter/argo/commit/52ddfc72e77991d4386b859cfe73ea7d57698daf))
+* pip and deps ([39c9059](https://github.com/RockefellerArchiveCenter/argo/commit/39c9059819b9690e9a96e15d1fd5544608ba83f7))
+
 ## [4.3.1](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.3.0...argo-v4.3.1) (2026-10-19)
 
 
