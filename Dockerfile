@@ -9,7 +9,7 @@ RUN apk add --no-cache postgresql-dev gcc py3-setuptools py3-distutils-extra
 WORKDIR /var/www/${APPLICATION_NAME}
 
 # Install Python requirements
-RUN pip install setuptools
+RUN python -m pip install --upgrade "pip>=26.2.2" setuptools
 COPY requirements.txt .
 RUN pip install -r requirements.txt
 
