@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.3.3](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.3.2...argo-v4.3.3) (2026-11-02)
+
+
+### Bug Fixes
+
+* **deps:** Scheduled dependency updates ([d716870](https://github.com/RockefellerArchiveCenter/argo/commit/d716870cf9519f490f31da343da623468d825ecc))
+* **deps:** Scheduled dependency updates ([27f19fd](https://github.com/RockefellerArchiveCenter/argo/commit/27f19fdbcc5d363ec4f39e09d3bdd37f79cc8f2f))
+
 ## [4.3.2](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.3.1...argo-v4.3.2) (2026-10-21)
 
 
