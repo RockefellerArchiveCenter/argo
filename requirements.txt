@@ -1,4 +1,4 @@
-asgiref==3.12.1
+asgiref==3.13.0
     # via
     #   django
     #   django-cors-headers
@@ -6,7 +6,7 @@ attrs==26.1.0
     # via
     #   jsonschema
     #   referencing
-certifi==2026.10.19
+certifi==2026.10.23
     # via elasticsearch
 django==5.2.18
     # via
@@ -57,13 +57,13 @@ packaging==26.3
     #   django-nine
 psycopg2==2.9.13
     # via -r requirements.in
-python-dateutil==2.9.0.post0
+python-dateutil==3.0.0
     # via elasticsearch-dsl
 pyyaml==6.0.3
     # via -r requirements.in
-rac-es==1.1.6
+rac-es==1.1.7
     # via -r requirements.in
-rac-schema-validator==1.1.6
+rac-schema-validator==1.1.7
     # via -r requirements.in
 referencing==0.37.0
     # via
@@ -85,6 +85,8 @@ sqlparse==0.6.0
     # via django
 typing-extensions==4.16.0
     # via referencing
+tzdata==2026.6
+    # via python-dateutil
 uritemplate==4.2.0
     # via -r requirements.in
 urllib3==2.8.0
