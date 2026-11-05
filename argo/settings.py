@@ -17,19 +17,22 @@ from . import config
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+# Separator to use for configs that are lists
+CONFIG_SEPARATOR = os.getenv("CONFIG_SEPARATOR", config.CONFIG_SEPARATOR)
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/2.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config.DJANGO_SECRET_KEY
+SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", config.DJANGO_SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config.DJANGO_DEBUG
+DEBUG = bool(os.getenv("DJANGO_DEBUG", config.DJANGO_DEBUG))
 
-ALLOWED_HOSTS = config.DJANGO_ALLOWED_HOSTS
-USE_X_FORWARDED_HOST = config.USE_X_FORWARDED_HOST
-SECURE_PROXY_SSL_HEADER = config.SECURE_PROXY_SSL_HEADER
+ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", config.DJANGO_ALLOWED_HOSTS).split(CONFIG_SEPARATOR)
+USE_X_FORWARDED_HOST = bool(os.getenv("USE_X_FORWARDED_HOST", config.USE_X_FORWARDED_HOST))
+SECURE_PROXY_SSL_HEADER = os.getenv("SECURE_PROXY_SSL_HEADER", config.SECURE_PROXY_SSL_HEADER).split(CONFIG_SEPARATOR)
 
 # Application definition
 
@@ -85,12 +88,12 @@ WSGI_APPLICATION = 'argo.wsgi.application'
 
 DATABASES = {
     "default": {
-        "ENGINE": config.SQL_ENGINE,
-        "NAME": config.SQL_DATABASE,
-        "USER": config.SQL_USER,
-        "PASSWORD": config.SQL_PASSWORD,
-        "HOST": config.SQL_HOST,
-        "PORT": config.SQL_PORT,
+        "ENGINE": os.getenv("SQL_ENGINE", config.SQL_ENGINE),
+        "NAME": os.getenv("SQL_DATABASE", config.SQL_DATABASE),
+        "USER": os.getenv("SQL_USER", config.SQL_USER),
+        "PASSWORD": os.getenv("SQL_PASSWORD", config.SQL_PASSWORD),
+        "HOST": os.getenv("SQL_HOST", config.SQL_HOST),
+        "PORT": os.getenv("SQL_PORT", config.SQL_PORT),
     }
 }
 
@@ -131,7 +134,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
 
-STATIC_URL = config.DJANGO_STATIC_URL
+STATIC_URL = os.getenv("DJANGO_STATIC_URL", config.DJANGO_STATIC_URL)
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 AUTH_USER_MODEL = 'api_formatter.User'
@@ -148,13 +151,17 @@ REST_FRAMEWORK = {
     'ORDERING_PARAM': 'sort',
 }
 
+ELASTICSEARCH_API_KEY = None
+if bool(os.getenv("ELASTICSEARCH_API_KEY", config.ELASTICSEARCH_API_KEY)):
+    ELASTICSEARCH_API_KEY = os.getenv("ELASTICSEARCH_API_KEY", config.ELASTICSEARCH_API_KEY)
+
 # Elasticsearch configuration
 ELASTICSEARCH_DSL = {
     "default": {
-        "hosts": config.ELASTICSEARCH_HOSTS,
-        "index": config.ELASTICSEARCH_INDEX,
-        "connection": config.ELASTICSEARCH_CONNECTION,
-        "api_key": getattr(config, 'ELASTICSEARCH_API_KEY', None)
+        "hosts": os.getenv("ELASTICSEARCH_HOSTS", config.ELASTICSEARCH_HOSTS).split(CONFIG_SEPARATOR),
+        "index": os.getenv("ELASTICSEARCH_INDEX", config.ELASTICSEARCH_INDEX),
+        "connection": os.getenv("ELASTICSEARCH_CONNECTION", config.ELASTICSEARCH_CONNECTION),
+        "api_key": ELASTICSEARCH_API_KEY
     }
 }
 
@@ -171,6 +178,6 @@ CSP_FONT_SRC = ("'self'", "https://assets.rockarch.org")
 CSP_FRAME_SRC = ("'none'")
 CSP_FRAME_ANCESTORS = ("'none'")
 
-CITATION_REPOSITORY_NAME = config.CITATION_REPOSITORY_NAME
-CITATION_REPOSITORY_BASEURL = config.CITATION_REPOSITORY_BASEURL
-CITATION_SEPARATOR = config.CITATION_SEPARATOR
+CITATION_REPOSITORY_NAME = os.getenv("CITATION_REPOSITORY_NAME", config.CITATION_REPOSITORY_NAME)
+CITATION_REPOSITORY_BASEURL = os.getenv("CITATION_REPOSITORY_BASEURL", config.CITATION_REPOSITORY_BASEURL)
+CITATION_SEPARATOR = os.getenv("CITATION_SEPARATOR", config.CITATION_SEPARATOR)
