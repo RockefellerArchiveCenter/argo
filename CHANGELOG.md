@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.4.0](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.3.3...argo-v4.4.0) (2026-11-05)
+
+
+### Features
+
+* Update deploy for containers ([bb7384d](https://github.com/RockefellerArchiveCenter/argo/commit/bb7384d47c90d527df404bb60321b4a3ca2edd49))
+* Updates deploy patterns to support container deploy in dev ([c96a26c](https://github.com/RockefellerArchiveCenter/argo/commit/c96a26cbc0dc8e69b691419b71457178b5c65ccc))
+
 ## [4.3.3](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.3.2...argo-v4.3.3) (2026-11-02)
 
 
