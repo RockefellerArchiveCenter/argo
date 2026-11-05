@@ -41,6 +41,7 @@ services:
       - CITATION_REPOSITORY_BASEURL=${CITATION_REPOSITORY_BASEURL:-https://dimes.rockarch.org/}
       - CITATION_SEPARATOR=; 
       - CONFIG_SEPARATOR=,
+    hostname: ${HOSTNAME}
 
     volumes:
       - .:/var/www/argo
