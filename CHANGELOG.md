@@ -1,5 +1,13 @@
 # Changelog
 
+## [4.4.1](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.4.0...argo-v4.4.1) (2026-11-16)
+
+
+### Bug Fixes
+
+* coerce boolean config values to integers before evaluating ([5d8972a](https://github.com/RockefellerArchiveCenter/argo/commit/5d8972a1c9fd0661bc8fb8823ecfb7772131c478))
+* coerce boolean setting values to integers before evaluating ([872e94d](https://github.com/RockefellerArchiveCenter/argo/commit/872e94d5df44f75fbfa147f7564257619cc64929))
+
 ## [4.4.0](https://github.com/RockefellerArchiveCenter/argo/compare/argo-v4.3.3...argo-v4.4.0) (2026-11-05)
 
 
