@@ -28,10 +28,10 @@ CONFIG_SEPARATOR = os.getenv("CONFIG_SEPARATOR", config.CONFIG_SEPARATOR)
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY", config.DJANGO_SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.getenv("DJANGO_DEBUG", config.DJANGO_DEBUG))
+DEBUG = bool(int(os.getenv("DJANGO_DEBUG", config.DJANGO_DEBUG)))
 
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", config.DJANGO_ALLOWED_HOSTS).split(CONFIG_SEPARATOR)
-USE_X_FORWARDED_HOST = bool(os.getenv("USE_X_FORWARDED_HOST", config.USE_X_FORWARDED_HOST))
+USE_X_FORWARDED_HOST = bool(int(os.getenv("USE_X_FORWARDED_HOST", config.USE_X_FORWARDED_HOST)))
 SECURE_PROXY_SSL_HEADER = os.getenv("SECURE_PROXY_SSL_HEADER", config.SECURE_PROXY_SSL_HEADER).split(CONFIG_SEPARATOR)
 
 # Application definition
